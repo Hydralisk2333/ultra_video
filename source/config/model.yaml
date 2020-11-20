@@ -1,0 +1,45 @@
+# corpusPath: /home/Dataset/tcd-pic
+corpusPath: /home/Dataset/dual_data/0
+charPath: source/vocab/word_conv.txt
+contentPath: dataset/content.txt
+trainPath: dataset/train.txt
+testPath: dataset/test.txt
+limitPath: dataset/limit_value.dp
+trainBatch: 12
+testBatch: 12
+device: cuda
+
+clip: 50.0
+learnRate: 0.0001
+epoch: 5000
+saveEvery: 1
+checkPath: null
+
+mode: dual
+#####
+enInputSize: 512
+enHiddenSize: 512
+imgShape: !!python/tuple
+- 128
+- 128
+numLayer: 3
+dropout: 0.1
+batchFirst: True
+imgPostfix: png
+channelType: 3
+vidMaxLen: 100
+#####
+ultraPostfix: wav
+ultraMaxLen: 400
+sonicFreq: 20000
+lipOffset: 60
+nfft: 32768
+winLen: 30
+syLen: 8
+frameTime: 0.15
+aheadTime: 0.01
+#####
+labMaxLen: 1
+####
+netType: conv
+vocabType: word
